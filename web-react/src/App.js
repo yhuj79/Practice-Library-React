@@ -1,4 +1,5 @@
 import { Component } from "react";
+import BasicTab from "./Components/BasicTab";
 import HeadTitle from './Components/HeadTitle';
 
 class App extends Component {
@@ -6,6 +7,7 @@ class App extends Component {
     return (
       <div>
         <HeadTitle />
+        <BasicTab />
       </div>
     )
   }

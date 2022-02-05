@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const TitleBlock = styled.div`
+const StHeadTitle = styled.div`
     background-color: #B2CCFF; color: white;
     font-size: 2rem; font-weight: 700; text-shadow:2px 2px 2px #8C8C8C;
     display: flex; align-items: center; justify-content: center;
@@ -9,7 +9,7 @@ const TitleBlock = styled.div`
 
 const HeadTitle = () => {
     return (
-        <TitleBlock>Welcome React!</TitleBlock>
+        <StHeadTitle>Welcome React!</StHeadTitle>
     )
 }
 export default HeadTitle;
