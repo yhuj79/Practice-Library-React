@@ -3,11 +3,10 @@ import React from "react";
 import { AppBar, Tabs, Tab, Box } from "@material-ui/core";
 import HomeIcon from '@material-ui/icons/Home';
 import AppleIcon from '@material-ui/icons/Apple';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import InsertPhotoIcon from '@material-ui/icons/InsertPhoto';
-import Say from './Say';
-import Home from './Home';
-import Apple from './Apple';
+import FullCal from './FullCal'; import Home from './Home';
+import Apple from './Apple'; import Photo from './Photo';
 
 const StyledAppBar = styled(AppBar)`
     &&{
@@ -20,8 +19,8 @@ const StyledAppBar = styled(AppBar)`
     & .MuiTabs-flexContainer {
         display: flex; justify-content: space-between;
     }
-    & .MuiButtonBase-root {
-        font-size: 1rem;
+    & .MuiSvgIcon-root, .MuiButtonBase-root {
+        font-size: 2rem;
         font-weight: 550;
     }
     & .MuiButtonBase-root:hover {
@@ -69,7 +68,7 @@ const BasicTab = () => {
                     <Tab icon={<HomeIcon />} label="Home" {...a11yProps(0)} />
                     <Tab icon={<AppleIcon />} label="Apple" {...a11yProps(1)} />
                     <Tab icon={<InsertPhotoIcon />} label="Photo" {...a11yProps(2)} />
-                    <Tab icon={<MenuBookIcon />} label="Other" {...a11yProps(3)} />
+                    <Tab icon={<CalendarTodayIcon />} label="CALENDAR" {...a11yProps(3)} />
                 </Tabs>
             </StyledAppBar>
             <TabPanel value={value} index={0}>
@@ -79,10 +78,10 @@ const BasicTab = () => {
                 <Apple />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Item Three
+                <Photo />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <Say />
+                <FullCal />
             </TabPanel>
         </Box>
     );
