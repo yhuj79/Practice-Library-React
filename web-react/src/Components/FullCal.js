@@ -12,6 +12,7 @@ const StCal = styled.div`
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     transition: all 0.7s;
     font-size: 1.5rem;
+    width: 1000px;
 
     @keyframes smoothAppear {
         from {

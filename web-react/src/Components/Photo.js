@@ -15,6 +15,7 @@ const StPhoto = styled.div`
     border-radius: 3px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     transition: all 0.7s;
+    width: 1300px;
 
     & .PhotoImage {
         display: block; margin: auto;
