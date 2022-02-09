@@ -2,11 +2,16 @@ import styled from 'styled-components';
 import React from "react";
 import { AppBar, Tabs, Tab, Box } from "@material-ui/core";
 import HomeIcon from '@material-ui/icons/Home';
+import NewspaperIcon from '@material-ui/icons/Assignment';
 import AppleIcon from '@material-ui/icons/Apple';
-import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import InsertPhotoIcon from '@material-ui/icons/InsertPhoto';
-import FullCal from './FullCal'; import Home from './Home';
-import Apple from './Apple'; import Photo from './Photo';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+
+import Home from './Home';
+import News from './News';
+import Apple from './Apple';
+import Photo from './Photo';
+import FullCal from './FullCal';
 
 const StyledAppBar = styled(AppBar)`
     &&{
@@ -14,13 +19,13 @@ const StyledAppBar = styled(AppBar)`
         box-shadow: none;
     }
     & .MuiTabs-indicator {
-        background: #1890ff;
+        background: #1890ff; height: 5px; border-radius: 3px;
     }
     & .MuiTabs-flexContainer {
         display: flex; justify-content: space-between;
     }
     & .MuiSvgIcon-root, .MuiButtonBase-root {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 550;
     }
     & .MuiButtonBase-root:hover {
@@ -66,21 +71,25 @@ const BasicTab = () => {
             <StyledAppBar position="static">
                 <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example">
                     <Tab icon={<HomeIcon />} label="Home" {...a11yProps(0)} />
-                    <Tab icon={<AppleIcon />} label="Apple" {...a11yProps(1)} />
-                    <Tab icon={<InsertPhotoIcon />} label="Photo" {...a11yProps(2)} />
-                    <Tab icon={<CalendarTodayIcon />} label="CALENDAR" {...a11yProps(3)} />
+                    <Tab icon={<NewspaperIcon />} label="News" {...a11yProps(1)} />
+                    <Tab icon={<AppleIcon />} label="Apple" {...a11yProps(2)} />
+                    <Tab icon={<InsertPhotoIcon />} label="Photo" {...a11yProps(3)} />
+                    <Tab icon={<CalendarTodayIcon />} label="Calendar" {...a11yProps(4)} />
                 </Tabs>
             </StyledAppBar>
             <TabPanel value={value} index={0}>
                 <Home />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Apple />
+                <News />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Photo />
+                <Apple />
             </TabPanel>
             <TabPanel value={value} index={3}>
+                <Photo />
+            </TabPanel>
+            <TabPanel value={value} index={4}>
                 <FullCal />
             </TabPanel>
         </Box>
