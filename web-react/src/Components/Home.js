@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Weather from './Weather';
 
 const StHome = styled.div`
     padding: 1rem;
@@ -26,16 +27,20 @@ const StHome = styled.div`
 
 const Home = () => {
   return (
-    <StHome>
-      <h1>What is React?</h1>
-      <h2>A JavaScript library for building user interfaces</h2>
-      <p>React makes it painless to create interactive UIs.
-        Design simple views for each state in your application,
-        and React will efficiently update and render just the right
-        components when your data changes.
-        Declarative views make your code more predictable and
-        easier to debug.</p>
-    </StHome>
+    <div>
+      <Weather></Weather>
+      <StHome>
+        <h1>What is React?</h1>
+        <h2>A JavaScript library for building user interfaces</h2>
+        <p>React makes it painless to create interactive UIs.
+          Design simple views for each state in your application,
+          and React will efficiently update and render just the right
+          components when your data changes.
+          Declarative views make your code more predictable and
+          easier to debug.</p>
+      </StHome>
+
+    </div>
   )
 }
 export default Home;
