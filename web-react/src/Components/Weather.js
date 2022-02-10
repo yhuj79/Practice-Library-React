@@ -8,13 +8,33 @@ const Weather = () => {
         lang: 'en',
         unit: 'metric', // values are (metric, standard, imperial)
     });
+    const customStyles = {
+        fontFamily: 'Segoe UI',
+        gradientStart: '#B2CCFF',
+        gradientMid: '#A0BAED',
+        gradientEnd: '#8EA8DB',
+        locationFontColor: '#223C6F',
+        todayTempFontColor: '#223C6F',
+        todayDateFontColor: '#223C6F',
+        todayRangeFontColor: '#223C6F',
+        todayDescFontColor: '#223C6F',
+        todayInfoFontColor: '#223C6F',
+        todayIconColor: '#FFF',
+        forecastBackgroundColor: '#FFF',
+        forecastSeparatorColor: '#DDD',
+        forecastDateColor: '#777',
+        forecastDescColor: '#777',
+        forecastRangeColor: '#777',
+        forecastIconColor: '#4BC4F7',
+    };
     return (
         <OpenWeatherAPI
+            theme={customStyles}
             isLoading={isLoading}
             errorMessage={errorMessage}
             data={data}
             lang="en"
-            locationLabel="Seoul"
+            locationLabel="SEOUL"
             unitsLabels={{ temperature: '℃', windSpeed: 'Km/h' }}
             showForecast
         />
