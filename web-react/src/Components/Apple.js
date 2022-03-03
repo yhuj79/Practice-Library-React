@@ -38,6 +38,7 @@ const Apple = () => {
         phone manufacturer. It is one of the Big Five American information
         technology companies, alongside Alphabet (Google), Amazon, Meta
         (Facebook), and Microsoft.</p>
+      <p>iphne ipod applewatch</p>
     </StApple>
   )
 }
